@@ -1,0 +1,94 @@
+CC Lab1 Windows Steps
+step 1: Select EC2 dashboard
+step 2: Click on instances
+step 3: Click on launch Instance
+step 4: Click free tier checkbox
+step 5: Search windows and select windows 2012 R2 Base
+Step 6: Select free tier and click next
+Step 7: Change the auto assign Public IP option to enable
+Step 8: Click next:Add Storage
+step 9: Click next:Add Tags
+step 10: Click on add tag
+step 11: Create a new tag by giving key and value(ex: key=shakthi value=vel)
+step 12: Click on next:configure security group
+step 13: Change the source option to My Ip (default it will be custom)
+Step 14: Click on Review and Launch
+Step 15: Click on Launch
+Step 16: Select first drop down and select create a new key pair
+step 17: Select the textbox and five a key name (ex: lab1Windows)
+step 18: Download the key pair(lab1Windows.pem file) and store it in a safe place(easy to access)
+step 19: Click on launch instance
+step 20: Goto to the EC2 Dashboard
+step 21: Select the checkbox of the newly created instance and right click on the instance
+step 22: Select connect option
+step 23: Select RDP Client
+step 24: Download remote desktop file
+step 25: Click on get password
+step 26: Select lab1windows.pem file
+step 27: Click on decrypt password
+step 28: Now the password will be visible copy the password
+step 29: Open downloads and double click on remote desktop file
+step 30: Enter the copied password
+step 31: Click yes
+step 32: Install a software on windows 2012
+
+
+
+
+CC Lab 1 Linux
+Step 1: Search for VPC and select
+Step 2: Select Your VPCs
+Step 3: Click on Create VPC
+Step 4: Enter VPC name (EX: lab1 ) and IP address as 10.0.0.0/16 and click on create VPC
+Step 5: Select Subnets on nav bar click on create subnet
+Step 6: select the VPC id and goto IPV4 CIDR block and select 10.0.0.0/24
+Step 7: Click on Create subnet
+Step 8: Click on Internet Gateway on nav bar
+Step 9: Click on Create Internet Gateway
+Step 10: Enter Internet Gateway Name (EX: lab1)
+Step 11: The default state will be detached to attach click attack a VPC option on top right
+Step 12: Select the VPC and click on Attach Internet Gateway
+Step 13: Click on route table on nav bar
+Step 14: Click on create route table
+Step 15: Enter the name of route table (EX: lab1) and select the VPC created
+Step 16: Click on create route table
+Step 17: Click on route table on nav bar
+Step 18: Click the checkbox of newly created route table
+Step 19: Right click and select edit submission
+Step 20: Select the subnet and click on save association
+Step 21: Select the checkbox of newly created route
+Step 22: On the bottom select routes tab and click on edit routes
+Step 23: Click on Add routes
+Step 24: Enter 0.0.0.0/24 on destination field
+Step 25: Select Internet Gateway on target field it will load the igw number
+Step 26: Click on Save Changes
+Step 27: Go to EC2 Dashboard
+Step 28: Click on Launch Instances
+Step 29: Select the free tier checkboxStep 30: Select Amazon Linux 2 AMI and Click on Next: Configure Instance details
+Step 31: On network field select the VPC created
+Step 32: Change Auto Assign Public IP field to enable
+Step 33: Click Next: Add Storage
+Step 34: Click Add Tag
+Step 35: Click on New tag and Create a new Tag
+Step 36: Click on Next: Configure Security group
+Step 37: Click on Add Rule and select HTTP (don’t change source)
+Step 38: Click on Add Rule and select MySql/Aurora and change source to My Ip
+Step 39: Click on Review and Launch
+Step 40: Click on Launch
+Step 41: Create a new key pair
+Step 42: Click download key pair
+Step 43: Click on Launch Instance
+Step 44: Search VPC and Select
+Step 45: Select the checkbox of VPC created and right click and select Edit DNS Hostname
+Step 46: Click the checkbox for DNS hostname (enable)
+Step 47: Download and install puttygen
+Step 48: Open putty gen select SSH-1(RSA) and click on load
+Step 49: change the file type selector to all (*) and Select the .pem file, click ok
+Step 50: click on save private key and save the file in a safe folder
+Step 51: Open Putty
+Step 52: Open the EC2 instance and copy Public IPV4 DNS
+Step 53: paste that in Host Name Field (Putty)
+Step 54: on the nav bar click on SSH and click on Auth (not on + symbol)
+Step 55: Click on Browse and select .ppk file (created by puttygen)
+Step 56: Click on Open and click accept
+Step 57: Enter ec2-user as login
